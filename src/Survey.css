@@ -1,0 +1,27 @@
+#questions{
+  color: red;
+	margin: 10px 10px 30px 40px;
+}
+
+button{
+  color: blue;
+  padding: 16px;
+  width: 700px;
+  text-align: center;
+  font-size: 16px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: block;
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+button:hover {opacity: 1}
+
+#correct{
+  margin: -150px 0px 0px 800px;
+}
+
+#incorrect{
+  margin: 30px 0px 0px 800px;
+}
