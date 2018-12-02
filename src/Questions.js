@@ -8,7 +8,8 @@ class Questions extends React.Component {
         "What is the capital of The Great Britan?",
         "ReactJS is...?",
         "How many days is a leap year?",
-        "What is the radius of the Earth?"
+        "What is the radius of the Earth?",
+        "How many bits in a byte?"
       ]
     };
   }

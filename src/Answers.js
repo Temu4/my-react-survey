@@ -5,25 +5,40 @@ class Answers extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      answer1: ["Paris", "Useful JS framework", "364 days", "about 6 300 km"],
+      answer1: [
+        "Paris",
+        "Useful JS framework",
+        "364 days",
+        "about 6 300 km",
+        "6,5"
+      ],
       answer2: [
         "Berlin",
         "JS library for building user interfaces",
         "365 days",
-        "5 000 km"
+        "5 000 km",
+        "10"
       ],
       answer3: [
         "London",
         "A DataBase for storing personal data",
         "366 days",
-        "about 10 000 km"
+        "about 10 000 km",
+        "8"
       ],
-      answer4: ["Kyiv", "Name of modern weapon", "367 days", "can't imagine"],
+      answer4: [
+        "Kyiv",
+        "Name of modern weapon",
+        "367 days",
+        "can't imagine",
+        "12"
+      ],
       correctAnswer: [
         "London",
         "JS library for building user interfaces",
         "366 days",
-        "about 6 300 km"
+        "about 6 300 km",
+        "8"
       ]
     };
   }

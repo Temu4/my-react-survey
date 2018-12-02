@@ -32,14 +32,18 @@ class Survey extends React.Component {
         }));
   };
 
+  //show final scope by comparing {questionNumber} and {isShowen};
+  //in this section we see intresting feature of ReactJS - its "slow-speed"
   showFinalScope = () => {
-    if (this.state.questionNumber > 2) {
+    if (this.state.questionNumber > 3) {
       return this.setState(prevState => ({ isShowen: !prevState.isShowen }));
     }
   };
 
   render() {
     return (
+      //1)show Questions, Answers, Correct, Incorrect components;
+      //2)after 5th answering show FinalScope component;
       <div
         onClick={() => {
           this.showFinalScope();

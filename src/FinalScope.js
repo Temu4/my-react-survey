@@ -5,13 +5,13 @@ class FinalScope extends React.Component {
   render() {
     return (
       <div>
-        <h2 id="finalScope">Your final scope</h2>
-        <h3 id="result">
+        <h1 id="finalScope">Your final scope</h1>
+        <h2 id="result">
           Correct answers was: {this.props.counterCorrectAnswers}
-        </h3>
-        <h3 id="result">
+        </h2>
+        <h2 id="result">
           Incorrect answers was: {this.props.counterIncorrectAnswers}
-        </h3>
+        </h2>
       </div>
     );
   }

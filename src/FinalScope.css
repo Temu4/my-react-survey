@@ -1,13 +1,13 @@
 #finalScope {
   color: red;
   text-align: center;
-  text-decoration: black;
+  text-decoration: red;
   text-decoration-line: underline;
-  text-shadow: 1px 1px 2px black, 0 0 1em red;
+  text-shadow: 1px 1px 2px black, 0 0 3px red;
 }
 
 #result {
   color: red;
   text-align: center;
-  text-shadow: 1px 1px 2px black, 0 0 1em yellow;
+  text-shadow: 1px 1px 2px black, 0 0 2px blue;
 }
