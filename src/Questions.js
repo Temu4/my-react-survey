@@ -7,7 +7,7 @@ class Questions extends React.Component {
       questionsArray: [
         "What is the capital of The Great Britan?",
         "ReactJS is...?",
-        "How many days is a leap year?",
+        "How many days is in a leap year?",
         "What is the radius of the Earth?",
         "How many bits in a byte?"
       ]
