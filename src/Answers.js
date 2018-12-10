@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 
 class Answers extends React.Component {
   //set of answers for {questionsArray[i]}

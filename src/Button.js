@@ -1,12 +1,14 @@
 import React from "react";
 
 class Button extends React.Component {
-  constuctor(props) {
+  constructor(props) {
     super(props);
-    this.state = {};
   }
   render() {
-    return <button />;
+    var answers = this.props.answerArray.map(item => {
+      return <button onClick>Answer1: {item.answer}</button>;
+    });
+    return <div>{answers}</div>;
   }
 }
 
