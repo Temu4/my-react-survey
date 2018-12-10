@@ -12,11 +12,9 @@ class Survey extends React.Component {
     this.state = {
       counterCorrectAnswers: 0,
       counterIncorrectAnswers: 0,
-      questionNumber: 0,
-      isShowen: true
+      questionNumber: 0
     };
     this.checkingCorrectAnswer = this.checkingCorrectAnswer.bind(this);
-    this.showFinalScope = this.showFinalScope.bind(this);
   }
 
   //check user's answer and list next questions and answers
@@ -32,43 +30,40 @@ class Survey extends React.Component {
         }));
   };
 
-  //show final scope by comparing {questionNumber} and {isShowen};
-  //in this section we see intresting feature of ReactJS - its "slow-speed"
-  showFinalScope = () => {
-    if (this.state.questionNumber > 3) {
-      return this.setState(prevState => ({ isShowen: !prevState.isShowen }));
-    }
-  };
-
   render() {
-    return (
-      //1)show Questions, Answers, Correct, Incorrect components;
-      //2)after 5th answering show FinalScope component;
-      <div
-        onClick={() => {
-          this.showFinalScope();
-        }}
-      >
-        {this.state.isShowen ? (
-          <div>
+    //after 5th questions shows FinalScope
+    if (this.state.questionNumber < 5) {
+      return (
+        <div className="container">
+          <div className="row">
             <Questions questionNumber={this.state.questionNumber} />
-            <Answers
-              questionNumber={this.state.questionNumber}
-              checkingCorrectAnswer={this.checkingCorrectAnswer}
-            />
-            <Correct counterCorrectAnswers={this.state.counterCorrectAnswers} />
-            <Incorrect
-              counterIncorrectAnswers={this.state.counterIncorrectAnswers}
-            />
           </div>
-        ) : (
-          <FinalScope
-            counterCorrectAnswers={this.state.counterCorrectAnswers}
-            counterIncorrectAnswers={this.state.counterIncorrectAnswers}
-          />
-        )}
-      </div>
-    );
+          <div className="row">
+            <div className="col-9">
+              <Answers
+                questionNumber={this.state.questionNumber}
+                checkingCorrectAnswer={this.checkingCorrectAnswer}
+              />
+            </div>
+            <div lassName="col-3">
+              <Correct
+                counterCorrectAnswers={this.state.counterCorrectAnswers}
+              />
+              <Incorrect
+                counterIncorrectAnswers={this.state.counterIncorrectAnswers}
+              />
+            </div>
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <FinalScope
+          counterCorrectAnswers={this.state.counterCorrectAnswers}
+          counterIncorrectAnswers={this.state.counterIncorrectAnswers}
+        />
+      );
+    }
   }
 }
 
